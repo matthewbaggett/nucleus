@@ -58,8 +58,9 @@ if (!function_exists('coalesce')) {
      *
      * @return null
      */
-    function coalesce(...$args)
+    function coalesce()
     {
+        $args = func_get_args();
         foreach ($args as $arg) {
             if ($arg !== null) {
                 return $arg;
