@@ -59,7 +59,7 @@ class Impersonator
 
         $resolved = $this->mockArguments($arguments);
 
-        return call_user_func_array($target, $resolved);
+        return call_user_func_array([$target, '__construct'], $resolved);
     }
 
     /**
